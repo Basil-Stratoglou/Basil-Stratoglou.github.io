@@ -18,10 +18,14 @@
     <script src="scripts/welcome.js" defer></script>
     <title>Welcome Page</title>
     <style>
-      .readme {
-        position: fixed;
-        bottom: 40px;
-        right: 10px;
+      #github-form {
+        margin-left: 40%;
+      }
+      #btn-readme {
+        margin-left: 12%;
+      }
+      .card {
+        border: hidden;
       }
       .submitform {
         position: fixed;
@@ -43,14 +47,22 @@
         outline: none;
       }
       .button:focus {
-        outline: none
+        outline: none;
       }
       .button:hover {
-        background-color: #fd018c;
+        background-color: #f15785;
         color: white;
       }
       .warning {
         color: red;
+      }
+      input[type='text'] {
+        margin-bottom: 20px;
+        margin-top: 10px;
+        width: 100%;
+        padding: 15px;
+        border-radius: 5px;
+        border: 1px solid #7ac9b7;
       }
     </style>
   </head>
@@ -60,51 +72,44 @@
       style="background: #aaa;"
     >
       <div class="container">
-        <h1 class="display-1">Welcome to the Tech Case</h1>
-        <p class="lead">By Vasileios Stratoglou</p>
+        <h1 class="display-1" id="jumbotron-header">
+          Welcome to the Tech Case
+        </h1>
+        <p class="lead" id="jumbotron-trail">By Vasileios Stratoglou</p>
       </div>
     </div>
-    <div class="submitform col-md-3 col-sm-1 col-lg-3">
-      <form id="github-submit-form" action="landingpage.html" method="GET">
-        <div class="form-group">
-          <label for="username">Github Username</label>
-          <input
-            type="text"
-            name="formName"
-            class="form-control"
-            id="githubUsername"
-            oninput="hideText()"
-            aria-describedby="emailHelp"
-            placeholder="Enter your Github username"
-            required
-          />
-        </div>
-        <div class="warning" id="warning"></div>
-        <button class="button submit" id="btn-submit">Submit</button>
-      </form>
+
+
+    <div class="col-md-6 col-lg-3" id="github-form">
+      <div class="card">
+        <form id="github-submit-form" action="landingpage.html" method="GET">
+          <div class="form-group">
+            <label for="username">Github Username</label>
+            <input
+              type="text"
+              name="formName"
+              class="form-control"
+              id="githubUsername"
+              oninput="hideText()"
+              aria-describedby="emailHelp"
+              placeholder="Enter your Github username"
+              required
+            />
+          </div>
+          <div class="warning" id="warning"></div>
+          <button class="button submit" id="btn-submit">Submit</button>
+          <button class="button readme" id="btn-readme">Readme File</button>
+        </form>
+      </div>
     </div>
 
     <script type="text/javascript">
       function hideText() {
-        document.getElementById('warning').innerHTML = "<div></div>";
+        document.getElementById('warning').innerHTML = '<div></div>';
       }
     </script>
 
-    <!-- <form action="/main.html" method="GET">
-      <div>
-        <label for="say">What greeting do you want to say?</label>
-        <input name="say" id="say" value="Hi" />
-      </div>
-      <div>
-        <label for="to">Who do you want to say it to?</label>
-        <input name="to" id="to" value="Mom" />
-      </div>
-      <div>
-        <button>Send my greetings</button>
-      </div>
-    </form> -->
-
-    <button class="button readme" id="btn-readme">Readme File</button>
+    
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
