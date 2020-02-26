@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script src="scripts/welcome.js" defer></script>
+    <title>Welcome Page</title>
+    <style>
+      .readme {
+        position: fixed;
+        bottom: 40px;
+        right: 10px;
+      }
+      .submitform {
+        position: fixed;
+        left: 35%;
+      }
+      .button {
+        background-color: white;
+        border: 2px solid #fd018c;
+        color: black;
+        padding: 16px 16px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        /* margin: 4px 2px; */
+        transition-duration: 0.3s;
+        cursor: pointer;
+        border-radius: 10px;
+        outline: none;
+      }
+      .button:focus {
+        outline: none
+      }
+      .button:hover {
+        background-color: #fd018c;
+        color: white;
+      }
+      .warning {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="jumbotron jumbotron-fluid bg-danger text-white text-center"
+      style="background: #aaa;"
+    >
+      <div class="container">
+        <h1 class="display-1">Welcome to the Tech Case</h1>
+        <p class="lead">By Vasileios Stratoglou</p>
+      </div>
+    </div>
+    <div class="submitform col-md-3 col-sm-1 col-lg-3">
+      <form id="github-submit-form" action="landingpage.html" method="GET">
+        <div class="form-group">
+          <label for="username">Github Username</label>
+          <input
+            type="text"
+            name="formName"
+            class="form-control"
+            id="githubUsername"
+            oninput="hideText()"
+            aria-describedby="emailHelp"
+            placeholder="Enter your Github username"
+            required
+          />
+        </div>
+        <div class="warning" id="warning"></div>
+        <button class="button submit" id="btn-submit">Submit</button>
+      </form>
+    </div>
+
+    <script type="text/javascript">
+      function hideText() {
+        document.getElementById('warning').innerHTML = "<div></div>";
+      }
+    </script>
+
+    <!-- <form action="/main.html" method="GET">
+      <div>
+        <label for="say">What greeting do you want to say?</label>
+        <input name="say" id="say" value="Hi" />
+      </div>
+      <div>
+        <label for="to">Who do you want to say it to?</label>
+        <input name="to" id="to" value="Mom" />
+      </div>
+      <div>
+        <button>Send my greetings</button>
+      </div>
+    </form> -->
+
+    <button class="button readme" id="btn-readme">Readme File</button>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

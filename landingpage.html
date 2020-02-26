@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+    <link rel="stylesheet" href="styles/app.css" />
+    <!-- Icons made by https://www.flaticon.com/authors/freepik at https://www.flaticon.com-->
+    <script src="scripts/main.js" defer></script>
+    <title>Main</title>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .navbar-custom {
+        background-color: var(--primary-color);
+      }
+      .navbar-toggler:focus {
+        outline: none;
+      }
+      #mode-change {
+        color: var(--bg-color);
+      }
+      #userName {
+        padding-right: 10px;
+        padding-bottom: 10px;
+        color: var(--bg-color);
+      }
+      #userAvatar {
+        border-radius: 10px;
+      }
+      #themes{
+        color: var(--bg-color);
+      }
+      #change {
+        background-color: var(--primary-color);
+      }
+      #btn-palette {
+        background-color: var(--primary-color);
+        border: transparent;
+        padding-left: 30%;
+      }
+      #btn-palette:focus {
+        outline: none;
+      }
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1; /* Sit on top */
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0); /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+      }
+      .box-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: fit-content;
+        border-radius: 10px;
+      }
+      .earthly-hues {
+        color: transparent;
+        background-color: #daad86;
+        border: none;
+        border-radius: 50%;
+      }
+      .earthly-hues:focus {
+        outline: none;
+      }
+      .hugging-trees {
+        color: transparent;
+        background-color: #379683;
+        border: none;
+        border-radius: 50%;
+      }
+      .hugging-trees:focus {
+        outline: none;
+      }
+      .winter-blues {
+        color: transparent;
+        background-color: #557a95;
+        border: none;
+        border-radius: 50%;
+      }
+      .winter-blues:focus {
+        outline: none;
+      }
+      .autumn-purples {
+        color: transparent;
+        background-color: #501b1d;
+        border: none;
+        border-radius: 50%;
+        margin: 4px 2px;
+      }
+      .autumn-purples:focus {
+        outline: none;
+      }
+      .karma-pink {
+        color: transparent;
+        background-color: #f15785;
+        border: none;
+        border-radius: 50%;
+        margin: 4px 2px;
+      }
+      .karma-pink:focus {
+        outline: none;
+      }
+      /* #container-sustainability {
+        background-color: var(--primary-color);
+        border-radius: 25px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        max-width: inherit;
+      }
+      #sustainability {
+        padding: 1%;
+      }
+      #sustainability-descr {
+        color: var(--bg-color);
+        padding-left: 10px;
+        padding-top: 10%;
+      } */
+      #nav-title {
+        color: var(--bg-color);
+      }
+      #nav-title:hover {
+        color: var(--secondary-color);
+      }
+      #nav-switch-title {
+        color: var(--bg-color);
+      }
+      #sustainability-row {
+        display: flex;
+      }
+      #container-sustainability {
+        flex-grow: 1;
+        background-color: var(--primary-color);
+        border-radius: 25px;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        margin-right: 5%;
+        /* margin-left: 5%; */
+      }
+      #sustainability {
+        padding: 1%;
+      }
+      #sustainability-descr {
+        color: var(--bg-color);
+        padding-left: 10px;
+        padding-top: 10%;
+      }
+      #info {
+        color: var(--font-color);
+      }
+      #food-waste{
+        color: var(--font-color);
+      }
+      #sdg{
+        color: var(--font-color);
+      }
+      #help{
+        color: var(--font-color);
+      }
+      .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+        color: var(--bg-color);
+        background-color: var(--primary-color);
+      }
+      .nav-link {
+        color: var(--primary-color);
+      }
+      .nav-link:hover {
+        color: var(--secondary-color);
+      }
+      #pills-heading {
+        color: var(--primary-color);
+      }
+      #url-style {
+        text-decoration: underline;
+        color: var(--primary-color);
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm navbar-custom navbar-dark">
+      <div id="mainNavbar" class="container">
+        <button
+          class="navbar-toggler"
+          data-toggle="collapse"
+          data-target="#mainBar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainBar">
+          <div class="theme-switcher">
+            <label class="theme-switch" for="checkbox">
+              <input type="checkbox" id="checkbox" />
+              <div class="theme-light-dark-switcher round"></div>
+            </label>
+          </div>
+
+          <div class="navbar-nav">
+            <a id="nav-switch-title" class="nav-item nav-link active">Light/Dark</a>
+            <a id="nav-title" class="nav-item nav-link" href="#container-sustainability">Home</a>
+            <a id="nav-title" class="nav-item nav-link" href="#container-sustainability">Slides</a>
+            <a id="nav-title" class="nav-item nav-link" href="#pills">More</a>
+          </div>
+          <div class="container"></div>
+          <div id="userName"></div>
+          <img
+            src=""
+            id="userAvatar"
+            class="img-fluid"
+            height="62"
+            width="62"
+          />
+        </div>
+      </div>
+      <div">
+        <p id="themes">Want more themes?</p>
+        <button type="button" id="btn-palette"><img src="images/palette.png" id="change" height="50" width="50"></button>
+      </div>
+    </nav>
+
+    <div id="color-picker" class="modal">
+      <div class="box-content">
+        <span class="close" id="close">&times;</span>
+        <span data-toggle="tooltip" title="Karma Pink">
+          <button id="karma-pink" class="karma-pink">62</button>
+        </span>
+        <span data-toggle="tooltip" title="Earthly Hues">
+          <button id="earthly-hues" class="earthly-hues">62</button>
+        </span>
+        <span data-toggle="tooltip" title="Hugging Trees">
+          <button id="hugging-trees" class="hugging-trees">62</button>
+        </span>
+        <span data-toggle="tooltip" title="Winter Blues">
+          <button id="winter-blues" class="winter-blues">62</button>
+        </span>
+        <span data-toggle="tooltip" title="Autumn Purples">
+          <button id="autumn-purples" class="autumn-purples">62</button>
+        </span>
+      </div>
+    </div>
+
+    <div class="container fade-in">
+        <!-- <div class="row justify-content-center">
+          <div class="container text-center">
+            <img id="sustainability" src="images/sustainability.png" class="responsive" height="100" width="100"/>
+            <p id="sustainability-descr">Towards a more sustainable future!</p>
+          </div>
+        </div> -->
+        <div class="container text-center">
+          <img id="sustainability" src="images/karma.png" class="responsive" height="60%" width="60%"/>
+        </div>
+    </div>
+
+    <div class="container">
+      <div class="row" id="sustainability-row">
+        <div class="box-content animation-element slide-left" id="container-sustainability">
+          <div class="row justify-content-center">
+            <div class="container text-center">
+              <img id="sustainability" src="images/world.png" class="responsive" height="100" width="100"/>
+              <p id="sustainability-descr">Towards</p>
+            </div>
+          </div>
+        </div>
+        <div class="box-content animation-element slide-bottom" id="container-sustainability">
+          <div class="row justify-content-center">
+            <div class="container text-center">
+              <img id="sustainability" src="images/earth.png" class="responsive" height="100" width="100"/>
+              <p id="sustainability-descr">a more sustainable</p>
+            </div>
+          </div>
+        </div>
+        <div class="box-content animation-element slide-right" id="container-sustainability">
+          <div class="row justify-content-center">
+            <div class="container text-center">
+              <img id="sustainability" src="images/save.png" class="responsive" height="100" width="100"/>
+              <p id="sustainability-descr">future!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+    <div class="container text-muted">
+      <h2 class="text-center py-5 my-4" id="info">More Information</h2>
+      <nav class="nav justify-content-center nav-pills flex-column flex-md-row">
+        <a class="nav-link active" href="#food-waste" data-toggle="tab">Food waste</a>
+        <a class="nav-link" href="#sdg" data-toggle="tab">The SDGs</a>
+        <a class="nav-link" href="#help" data-toggle="tab">How YOU can help!</a>
+      </nav>
+
+      <div class="tab-content py-5" id="pills">
+        <div class="tab-pane active" id="food-waste">
+          <h3 id="pills-heading">For food waste</h3>
+          <p>
+            Description for food waste
+          </p>
+        </div>
+        <div class="tab-pane" id="sdg">
+          <h3 id="pills-heading">United Nation's Sustainable Development Goals</h3>
+          <p>Want to learn more about the goals set by the United Nations concerning food waste for a sustainable future? <a id="url-style" href="https://sustainabledevelopment.un.org/sdg12">Click here!</a></p>
+        </div>
+        <div class="tab-pane" id="help">
+          <h3 id="pills-heading">Karma App</h3>
+          <p>Download the Karma app today!Available in <a id="url-style" href="https://play.google.com/store/apps/details?id=com.karma.life"><img src="images/android.png"  height="25" width="25"/>Android</a> and <a id="url-style" href="https://apps.apple.com/se/app/karma-the-surplus-food-app/id1087490062"><img src="images/ios.png" height="25" width="25"/>iOS</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function() {
+        $('[data-toggle="tooltip"]').tooltip({
+          trigger: 'hover'
+        });
+      });
+    </script>
+    <script>
+      const colorPicker = document.getElementById('color-picker');
+      window.onclick = function(event) {
+        if (event.target == colorPicker) {
+          colorPicker.style.display = 'none';
+        }
+      };
+    </script>
+  </body>
+</html>

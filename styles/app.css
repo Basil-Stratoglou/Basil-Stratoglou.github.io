@@ -1,0 +1,199 @@
+:root {
+  --primary-color: #f15785;
+  --secondary-color: #a8113e;
+  --font-color: #808080;
+  --bg-color: #fff;
+}
+
+[data-theme='dark'] {
+  --primary-color: #9a97f3;
+  --secondary-color: #818cab;
+  --font-color: #e1e1ff;
+  --bg-color: #161625;
+}
+
+[data-theme='karma'] {
+  --primary-color: #f15785;
+  --secondary-color: #a8113e;
+  --font-color: #808080;
+  --bg-color: #fff;
+}
+
+[data-theme='earthly'] {
+  --primary-color: #daad86;
+  --secondary-color: #bc896a;
+  --font-color: #8d8741;
+  --bg-color: #f5eccd;
+}
+
+[data-theme='hugging'] {
+  --primary-color: #edf5e1;
+  --secondary-color: #8ee4af;
+  --font-color: #05386b;
+  --bg-color: #379683;
+}
+
+[data-theme='winter'] {
+  --primary-color: #b1a296;
+  --secondary-color: #837b75;
+  --font-color: #5d5c61;
+  --bg-color: #557a95;
+}
+
+[data-theme='autumn'] {
+  --primary-color: #83677b;
+  --secondary-color: #64485c;
+  --font-color: #adadad;
+  --bg-color: #501b1d;
+}
+
+body {
+  font-family: 'Ubuntu', serif;
+  background-color: var(--bg-color);
+}
+
+/* .theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+} */
+
+/* .theme-switch-wrapper em {
+  margin-left: 10px;
+  font-size: 1rem;
+} */
+.theme-switcher {
+  padding-top: 1.5%;
+  padding-right: 0.5%;
+}
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.theme-light-dark-switcher {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+
+.theme-light-dark-switcher:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: '';
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 26px;
+}
+
+input:checked + .theme-light-dark-switcher {
+  background-color: #161625;
+}
+
+input:checked + .theme-light-dark-switcher:before {
+  transform: translateX(26px);
+}
+
+.theme-light-dark-switcher.round {
+  border-radius: 34px;
+}
+
+.theme-light-dark-switcher.round:before {
+  border-radius: 50%;
+}
+
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+  85% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animation-element {
+  opacity: 0;
+  position: relative;
+}
+
+.animation-element.slide-left {
+  opacity: 0;
+  transition: all 800ms linear;
+  transform: translate3d(-150px, 0px, 0px);
+}
+
+.animation-element.slide-left.in-view {
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
+}
+
+.animation-element.slide-right {
+  opacity: 0;
+  transition: all 800ms linear;
+  transform: translate3d(150px, 0px, 0px);
+}
+
+.animation-element.slide-right.in-view {
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
+}
+
+.animation-element.slide-bottom {
+  opacity: 0;
+  transition: all 800ms linear;
+  transform: translate3d(0px, 100px, 0px);
+}
+
+.animation-element.slide-bottom.in-view {
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
+}
+
+.fade-in {
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1s;
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* .animation-element.zoom-in {
+  opacity: 0;
+  transition: all 800ms linear;
+  transition-delay: 3s;
+  transform: scale(0);
+}
+
+.animation-element.zoom-in.in-view {
+  opacity: 1;
+  transform: scale(1);
+  position: relative;
+  animation: FadeIn 1.75s infinite;
+  animation-direction: alternate;
+} */
