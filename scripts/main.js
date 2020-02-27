@@ -71,7 +71,7 @@ function closeBox() {
 }
 
 function openReadmeFile () {
-  window.location = 'readme.md'
+  window.location = 'readme.html'
 }
 
 function check_if_in_view() {
