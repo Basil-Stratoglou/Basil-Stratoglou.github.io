@@ -31,6 +31,11 @@ const autumnBtn = document.getElementById('autumn-purples');
 var $animation_elements = $('.animation-element');
 var $window = $(window);
 
+function openGithub() {
+  window.location = 'https://github.com/' + userName.innerHTML;
+  console.log(userName.innerHTML);
+}
+
 if (currentTheme) {
   document.documentElement.setAttribute('data-theme', currentTheme);
 
