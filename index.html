@@ -15,11 +15,14 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+    <link rel="stylesheet" href="styles/app.css"/>
     <script src="scripts/welcome.js" defer></script>
     <title>Welcome Page</title>
     <style>
       #github-form {
-        margin-left: 40%;
+        margin: auto;
+        width: 100%;
       }
       #btn-readme {
         margin-left: 12%;
@@ -50,19 +53,22 @@
         outline: none;
       }
       .button:hover {
-        background-color: #f15785;
+        background-color: #fd018c;
         color: white;
       }
       .warning {
         color: red;
       }
-      input[type='text'] {
+      /* input[type='text'] {
         margin-bottom: 20px;
         margin-top: 10px;
         width: 100%;
         padding: 15px;
         border-radius: 5px;
         border: 1px solid #7ac9b7;
+      } */
+      input[type='text'] {
+        box-sizing: border-box;
       }
     </style>
   </head>
@@ -79,19 +85,18 @@
       </div>
     </div>
 
-
-    <div class="col-md-6 col-lg-3" id="github-form">
-      <div class="card">
-        <form id="github-submit-form" action="landingpage.html" method="GET">
+    <div class="col-md-6 col-lg-3 col-sm-3" id="github-form">
+        <form id="github-submit-form" action="main.html" method="GET">
           <div class="form-group">
-            <label for="username">Github Username</label>
+            <label for="githubUsername">Github Username</label>
             <input
               type="text"
+              pattern="[a-zA-Z0-9-]{4,25}"
               name="formName"
               class="form-control"
               id="githubUsername"
               oninput="hideText()"
-              aria-describedby="emailHelp"
+              aria-describedby="warning"
               placeholder="Enter your Github username"
               required
             />
@@ -100,16 +105,13 @@
           <button class="button submit" id="btn-submit">Submit</button>
           <button class="button readme" id="btn-readme">Readme File</button>
         </form>
-      </div>
     </div>
 
-    <script type="text/javascript">
+    <script>
       function hideText() {
         document.getElementById('warning').innerHTML = '<div></div>';
       }
     </script>
-
-    
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
