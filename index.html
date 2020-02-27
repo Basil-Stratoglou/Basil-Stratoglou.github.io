@@ -1,14 +1,16 @@
+---
+permalink: /index.html
+---
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
-    <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -19,63 +21,11 @@
     <link rel="stylesheet" href="styles/app.css"/>
     <script src="scripts/welcome.js" defer></script>
     <title>Welcome Page</title>
-    <style>
-      #github-form {
-        margin: auto;
-        width: 100%;
-      }
-      #btn-readme {
-        margin-left: 12%;
-      }
-      .card {
-        border: hidden;
-      }
-      .submitform {
-        position: fixed;
-        left: 35%;
-      }
-      .button {
-        background-color: white;
-        border: 2px solid #fd018c;
-        color: black;
-        padding: 16px 16px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        /* margin: 4px 2px; */
-        transition-duration: 0.3s;
-        cursor: pointer;
-        border-radius: 10px;
-        outline: none;
-      }
-      .button:focus {
-        outline: none;
-      }
-      .button:hover {
-        background-color: #fd018c;
-        color: white;
-      }
-      .warning {
-        color: red;
-      }
-      /* input[type='text'] {
-        margin-bottom: 20px;
-        margin-top: 10px;
-        width: 100%;
-        padding: 15px;
-        border-radius: 5px;
-        border: 1px solid #7ac9b7;
-      } */
-      input[type='text'] {
-        box-sizing: border-box;
-      }
-    </style>
   </head>
   <body>
     <div
-      class="jumbotron jumbotron-fluid bg-danger text-white text-center"
-      style="background: #aaa;"
+      class="jumbotron jumbotron-fluid text-white text-center"
+      id="index-jumbotron"
     >
       <div class="container">
         <h1 class="display-1" id="jumbotron-header">
@@ -103,7 +53,7 @@
           </div>
           <div class="warning" id="warning"></div>
           <button class="button submit" id="btn-submit">Submit</button>
-          <button class="button readme" id="btn-readme">Readme File</button>
+          
         </form>
     </div>
 

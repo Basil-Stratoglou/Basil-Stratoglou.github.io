@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -19,212 +18,7 @@
     <script src="scripts/main.js" defer></script>
     <title>Main</title>
     <style>
-      html {
-        scroll-behavior: smooth;
-      }
-      .navbar-custom {
-        background-color: var(--primary-color);
-      }
-      .navbar-toggler:focus {
-        outline: none;
-      }
-      #mode-change {
-        color: var(--bg-color);
-      }
-      #home {
-        color: var(--bg-color);
-      }
-      #home:hover {
-        color: var(--secondary-color);
-      }
-      #slides {
-        color: var(--bg-color);
-      }
-      #slides:hover {
-        color: var(--secondary-color);
-      }
-      #more {
-        color: var(--bg-color);
-      }
-      #more:hover {
-        color: var(--secondary-color);
-      }
-      #userName {
-        padding-right: 10px;
-        padding-bottom: 10px;
-        color: var(--bg-color);
-      }
-      #userName:hover {
-        text-decoration: underline;
-        color: var(--bg-color);
-      }
-      #userAvatar {
-        border-radius: 10px;
-      }
-      #themes {
-        color: var(--bg-color);
-      }
-      #change {
-        background-color: var(--primary-color);
-      }
-      #btn-palette {
-        background-color: var(--primary-color);
-        border: transparent;
-        padding-left: 30%;
-      }
-      #btn-palette:focus {
-        outline: none;
-      }
-      #btn-palette {
-        cursor: pointer;
-      }
-      .modal {
-        display: none;
-        position: fixed;
-        z-index: 1; /* Sit on top */
-        padding-top: 100px;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: auto; /* Enable scroll if needed */
-        background-color: rgb(0, 0, 0); /* Fallback color */
-        background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
-      }
-      .box-content {
-        background-color: #fefefe;
-        margin: auto;
-        padding: 20px;
-        border: 1px solid #888;
-        width: max-content;
-        border-radius: 15px;
-      }
-      .karma-pink {
-        width: 30px;
-        height: 30px;
-        color: transparent;
-        background-color: #f15785;
-        border: none;
-        border-radius: 50%;
-        margin-right: 10px;
-      }
-      .karma-pink:focus {
-        outline: none;
-      }
-      .earthly-hues {
-        width: 30px;
-        height: 30px;
-        color: transparent;
-        background-color: #daad86;
-        border: none;
-        border-radius: 50%;
-        margin-right: 10px;
-      }
-      .earthly-hues:focus {
-        outline: none;
-      }
-      .hugging-trees {
-        width: 30px;
-        height: 30px;
-        color: transparent;
-        background-color: #379683;
-        border: none;
-        border-radius: 50%;
-        margin-right: 10px;
-      }
-      .hugging-trees:focus {
-        outline: none;
-      }
-      .winter-blues {
-        width: 30px;
-        height: 30px;
-        color: transparent;
-        background-color: #557a95;
-        border: none;
-        border-radius: 50%;
-        margin-right: 10px;
-      }
-      .winter-blues:focus {
-        outline: none;
-      }
-      .autumn-purples {
-        width: 30px;
-        height: 30px;
-        color: transparent;
-        background-color: #501b1d;
-        border: none;
-        border-radius: 50%;
-        margin-right: 10px;
-      }
-      .autumn-purples:focus {
-        outline: none;
-      }
-      .close {
-        padding-left: 5px;
-        cursor: pointer;
-      }
-      #nav-switch-title {
-        color: var(--bg-color);
-      }
-      #sustainability-row {
-        display: flex;
-      }
-      .container-sustainability {
-        flex-grow: 1;
-        background-color: var(--primary-color);
-        border-radius: 25px;
-        margin-top: 5%;
-        margin-bottom: 5%;
-        margin-right: 5%;
-        /* margin-left: 5%; */
-      }
-      #sustainability {
-        padding: 1%;
-        width: 60%;
-        height: 60%;
-      }
-      .sustainability {
-        padding: 1%;
-      }
-      .sustainability-descr {
-        color: var(--bg-color);
-        padding-left: 10px;
-        padding-top: 10%;
-      }
-      #info {
-        color: var(--font-color);
-      }
-      #food-waste {
-        color: var(--font-color);
-      }
-      #sdg {
-        color: var(--font-color);
-      }
-      #help {
-        color: var(--font-color);
-      }
-      .nav-pills .nav-link.active,
-      .nav-pills .show > .nav-link {
-        color: var(--bg-color);
-        background-color: var(--primary-color);
-      }
-      .nav-link {
-        color: var(--primary-color);
-      }
-      .nav-link:hover {
-        color: var(--secondary-color);
-      }
-      .pills-heading {
-        color: var(--primary-color);
-      }
-      .url-style {
-        text-decoration: underline;
-        color: var(--primary-color);
-      }
-      .store-img {
-        width: auto;
-        height: auto;
-      }
+      
     </style>
   </head>
   <body>
@@ -241,19 +35,18 @@
           <div class="theme-switcher">
             <label class="theme-switch" for="checkbox">
               <input type="checkbox" id="checkbox" />
-              <a class="theme-light-dark-switcher round"></a>
+              <a class="theme-light-dark-switcher round" title="Light/Dark"></a>
             </label>
           </div>
 
           <div class="navbar-nav mr-auto">
-            <a id="nav-switch-title" class="nav-item nav-link active"
-              >Light/Dark</a
-            >
-            <a class="nav-item nav-link" id="home" href="#karma-logo">Home</a>
+            <a class="nav-item nav-link" id="home" href="javascript:home()">Home</a>
             <a class="nav-item nav-link" id="slides" href="#sustainability-row"
               >Slides</a
             >
             <a class="nav-item nav-link" id="more" href="#pills">More</a>
+            <a class="nav-item nav-link" id="themes" href="javascript:openPicker()">Themes</a>
+            <a class="nav-item nav-link" id="readme" href="javascript:openReadmeFile()">Readme</a>
           </div>
           <a href="javascript:openGithub();"><div id="userName"></div></a>
           <a href="javascript:openGithub();">
@@ -264,15 +57,7 @@
               class="img-fluid"
               height="62"
               width="62"
-            />
-          </a>
-          <a class="nav-item nav-link p-2" id="btn-palette" title="More Colors">
-            <img
-              src="images/palette.png"
-              alt="Color Picker"
-              id="change"
-              height="50"
-              width="50"
+              title="Your Github profile"
             />
           </a>
         </div>
@@ -300,7 +85,7 @@
       </div>
     </div>
 
-    <div class="container fade-in" id="karma-logo">
+    <div class="container fade-in">
       <div class="container text-center">
         <a href="https://karma.life/sv/"
           ><img
@@ -407,16 +192,16 @@
           <p>
             Download the Karma app today! Available in
             <a
-              id="url-style"
+              class="url-style"
               href="https://play.google.com/store/apps/details?id=com.karma.life"
-              ><img src="images/android.png" height="25" width="25" />
+              ><img src="images/android.png" alt="Android" height="25" width="25" />
               Android</a
             >
             and
             <a
-              id="url-style"
+              class="url-style"
               href="https://apps.apple.com/se/app/karma-the-surplus-food-app/id1087490062"
-              ><img src="images/ios.png" height="25" width="25" /> iOS</a
+              ><img src="images/ios.png" alt="iOS" height="25" width="25" /> iOS</a
             >
           </p>
         </div>
