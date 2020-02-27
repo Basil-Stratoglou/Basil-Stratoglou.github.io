@@ -47,20 +47,13 @@
   --bg-color: #501b1d;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: 'Ubuntu', serif;
   background-color: var(--bg-color);
 }
-
-/* .theme-switch-wrapper {
-  display: flex;
-  align-items: center;
-} */
-
-/* .theme-switch-wrapper em {
-  margin-left: 10px;
-  font-size: 1rem;
-} */
 .theme-switcher {
   padding-top: 1.5%;
   padding-right: 0.5%;
@@ -183,17 +176,248 @@ input:checked + .theme-light-dark-switcher:before {
   }
 }
 
-/* .animation-element.zoom-in {
-  opacity: 0;
-  transition: all 800ms linear;
-  transition-delay: 3s;
-  transform: scale(0);
+#index-jumbotron {
+  background-color: #fd018c;
 }
 
-.animation-element.zoom-in.in-view {
-  opacity: 1;
-  transform: scale(1);
-  position: relative;
-  animation: FadeIn 1.75s infinite;
-  animation-direction: alternate;
-} */
+#github-form {
+  margin: auto;
+  width: 100%;
+}
+#btn-readme {
+  margin-left: 1%;
+}
+.card {
+  border: hidden;
+}
+.submitform {
+  position: fixed;
+  left: 35%;
+}
+.button {
+  background-color: white;
+  border: 2px solid #fd018c;
+  color: black;
+  padding: 16px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.3s;
+  cursor: pointer;
+  border-radius: 10px;
+  outline: none;
+}
+.button:focus {
+  outline: none;
+}
+.button:hover {
+  background-color: #fd018c;
+  color: white;
+}
+.warning {
+  color: red;
+}
+input[type='text'] {
+  box-sizing: border-box;
+}
+.navbar-custom {
+  background-color: var(--primary-color);
+}
+.navbar-toggler:focus {
+  outline: none;
+}
+#mode-change {
+  color: var(--bg-color);
+}
+#home {
+  color: var(--bg-color);
+}
+#home:hover {
+  color: var(--secondary-color);
+}
+#slides {
+  color: var(--bg-color);
+}
+#slides:hover {
+  color: var(--secondary-color);
+}
+#more {
+  color: var(--bg-color);
+}
+#more:hover {
+  color: var(--secondary-color);
+}
+#themes {
+  color: var(--bg-color);
+}
+#themes:hover {
+  color: var(--secondary-color);
+}
+#readme {
+  color: var(--bg-color);
+}
+#readme:hover {
+  color: var(--secondary-color);
+}
+#userName {
+  padding-right: 10px;
+  padding-bottom: 10px;
+  color: var(--bg-color);
+}
+#userName:hover {
+  text-decoration: underline;
+  color: var(--bg-color);
+}
+#userAvatar {
+  border-radius: 10px;
+}
+#themes {
+  color: var(--bg-color);
+}
+#change {
+  background-color: var(--primary-color);
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.box-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: max-content;
+  border-radius: 15px;
+}
+.karma-pink {
+  width: 30px;
+  height: 30px;
+  color: transparent;
+  background-color: #f15785;
+  border: none;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.karma-pink:focus {
+  outline: none;
+}
+.earthly-hues {
+  width: 30px;
+  height: 30px;
+  color: transparent;
+  background-color: #daad86;
+  border: none;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.earthly-hues:focus {
+  outline: none;
+}
+.hugging-trees {
+  width: 30px;
+  height: 30px;
+  color: transparent;
+  background-color: #379683;
+  border: none;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.hugging-trees:focus {
+  outline: none;
+}
+.winter-blues {
+  width: 30px;
+  height: 30px;
+  color: transparent;
+  background-color: #557a95;
+  border: none;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.winter-blues:focus {
+  outline: none;
+}
+.autumn-purples {
+  width: 30px;
+  height: 30px;
+  color: transparent;
+  background-color: #501b1d;
+  border: none;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.autumn-purples:focus {
+  outline: none;
+}
+.close {
+  padding-left: 5px;
+  cursor: pointer;
+}
+#sustainability-row {
+  display: flex;
+}
+.container-sustainability {
+  flex-grow: 1;
+  background-color: var(--primary-color);
+  border-radius: 25px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-right: 5%;
+}
+#sustainability {
+  padding: 1%;
+  width: 60%;
+  height: 60%;
+}
+.sustainability {
+  padding: 1%;
+}
+.sustainability-descr {
+  color: var(--bg-color);
+  padding-left: 10px;
+  padding-top: 10%;
+}
+#info {
+  color: var(--font-color);
+}
+#food-waste {
+  color: var(--font-color);
+}
+#sdg {
+  color: var(--font-color);
+}
+#help {
+  color: var(--font-color);
+}
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: var(--bg-color);
+  background-color: var(--primary-color);
+}
+.nav-link {
+  color: var(--primary-color);
+}
+.nav-link:hover {
+  color: var(--secondary-color);
+}
+.pills-heading {
+  color: var(--primary-color);
+}
+.url-style {
+  text-decoration: underline;
+  color: var(--primary-color);
+}
+.store-img {
+  width: auto;
+  height: auto;
+}
