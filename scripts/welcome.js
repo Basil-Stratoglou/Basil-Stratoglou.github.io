@@ -18,11 +18,3 @@
     }
   }
 })();
-
-const readmeBtn = document.getElementById('btn-readme');
-
-function readmeFile () {
-  window.location = 'readme.md'
-}
-
-readmeBtn.addEventListener('click', readmeFile);
