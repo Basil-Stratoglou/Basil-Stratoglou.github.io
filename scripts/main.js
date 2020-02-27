@@ -21,7 +21,6 @@ const themeSwitcher = document.querySelector(
 );
 const currentTheme = localStorage.getItem('theme');
 const colorPickerBox = document.getElementById('color-picker');
-const paletteBtn = document.getElementById('btn-palette');
 var span = document.getElementById('close');
 const karmaBtn = document.getElementById('karma-pink');
 const earthlyBtn = document.getElementById('earthly-hues');
@@ -34,6 +33,10 @@ var $window = $(window);
 function openGithub() {
   window.location = 'https://github.com/' + userName.innerHTML;
   console.log(userName.innerHTML);
+}
+
+function home() {
+  window.location = 'index.html';
 }
 
 if (currentTheme) {
@@ -55,8 +58,6 @@ function switchLightDarkTheme(e) {
 }
 
 function openPicker() {
-  // document.documentElement.setAttribute('data-theme', 'yellow');
-  // localStorage.setItem('theme', 'yellow');
   colorPickerBox.style.display = 'block';
 }
 
@@ -67,6 +68,10 @@ function changeTheme(theme) {
 
 function closeBox() {
   colorPickerBox.style.display = 'none';
+}
+
+function openReadmeFile () {
+  window.location = 'readme.md'
 }
 
 function check_if_in_view() {
@@ -93,7 +98,6 @@ function check_if_in_view() {
 }
 
 themeSwitcher.addEventListener('change', switchLightDarkTheme, false);
-paletteBtn.addEventListener('click', openPicker);
 span.addEventListener('click', closeBox);
 earthlyBtn.addEventListener('click', function() {
   changeTheme('earthly');
