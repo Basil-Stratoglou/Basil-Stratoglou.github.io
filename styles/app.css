@@ -177,7 +177,7 @@ input:checked + .theme-light-dark-switcher:before {
 }
 
 #index-jumbotron {
-  background-color: #fd018c;
+  background-color: #f15785;
 }
 
 #github-form {
@@ -196,7 +196,7 @@ input:checked + .theme-light-dark-switcher:before {
 }
 .button {
   background-color: white;
-  border: 2px solid #fd018c;
+  border: 2px solid #f15785;
   color: black;
   padding: 16px 16px;
   text-align: center;
@@ -212,7 +212,7 @@ input:checked + .theme-light-dark-switcher:before {
   outline: none;
 }
 .button:hover {
-  background-color: #fd018c;
+  background-color: #f15785;
   color: white;
 }
 .warning {
