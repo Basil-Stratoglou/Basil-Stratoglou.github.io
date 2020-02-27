@@ -31,6 +31,24 @@
       #mode-change {
         color: var(--bg-color);
       }
+      #home {
+        color: var(--bg-color);
+      }
+      #home:hover {
+        color: var(--secondary-color);
+      }
+      #slides {
+        color: var(--bg-color);
+      }
+      #slides:hover {
+        color: var(--secondary-color);
+      }
+      #more {
+        color: var(--bg-color);
+      }
+      #more:hover {
+        color: var(--secondary-color);
+      }
       #userName {
         padding-right: 10px;
         padding-bottom: 10px;
@@ -57,6 +75,9 @@
       #btn-palette:focus {
         outline: none;
       }
+      #btn-palette {
+        cursor: pointer;
+      }
       .modal {
         display: none;
         position: fixed;
@@ -79,70 +100,68 @@
         border-radius: 15px;
       }
       .karma-pink {
+        width: 30px;
+        height: 30px;
         color: transparent;
         background-color: #f15785;
         border: none;
         border-radius: 50%;
+        margin-right: 10px;
       }
       .karma-pink:focus {
         outline: none;
       }
       .earthly-hues {
+        width: 30px;
+        height: 30px;
         color: transparent;
         background-color: #daad86;
         border: none;
         border-radius: 50%;
+        margin-right: 10px;
       }
       .earthly-hues:focus {
         outline: none;
       }
       .hugging-trees {
+        width: 30px;
+        height: 30px;
         color: transparent;
         background-color: #379683;
         border: none;
         border-radius: 50%;
+        margin-right: 10px;
       }
       .hugging-trees:focus {
         outline: none;
       }
       .winter-blues {
+        width: 30px;
+        height: 30px;
         color: transparent;
         background-color: #557a95;
         border: none;
         border-radius: 50%;
+        margin-right: 10px;
       }
       .winter-blues:focus {
         outline: none;
       }
       .autumn-purples {
+        width: 30px;
+        height: 30px;
         color: transparent;
         background-color: #501b1d;
         border: none;
         border-radius: 50%;
+        margin-right: 10px;
       }
       .autumn-purples:focus {
         outline: none;
       }
-      /* #container-sustainability {
-        background-color: var(--primary-color);
-        border-radius: 25px;
-        margin-top: 40px;
-        margin-bottom: 40px;
-        max-width: inherit;
-      }
-      #sustainability {
-        padding: 1%;
-      }
-      #sustainability-descr {
-        color: var(--bg-color);
-        padding-left: 10px;
-        padding-top: 10%;
-      } */
-      .nav-item {
-        color: var(--bg-color);
-      }
-      .nav-item:hover {
-        color: var(--secondary-color);
+      .close {
+        padding-left: 5px;
+        cursor: pointer;
       }
       #nav-switch-title {
         color: var(--bg-color);
@@ -202,6 +221,10 @@
         text-decoration: underline;
         color: var(--primary-color);
       }
+      .store-img {
+        width: auto;
+        height: auto;
+      }
     </style>
   </head>
   <body>
@@ -226,9 +249,11 @@
             <a id="nav-switch-title" class="nav-item nav-link active"
               >Light/Dark</a
             >
-            <a class="nav-item nav-link" href="#karma-logo">Home</a>
-            <a class="nav-item nav-link" href="#sustainability-row">Slides</a>
-            <a class="nav-item nav-link" href="#pills">More</a>
+            <a class="nav-item nav-link" id="home" href="#karma-logo">Home</a>
+            <a class="nav-item nav-link" id="slides" href="#sustainability-row"
+              >Slides</a
+            >
+            <a class="nav-item nav-link" id="more" href="#pills">More</a>
           </div>
           <a href="javascript:openGithub();"><div id="userName"></div></a>
           <a href="javascript:openGithub();">
@@ -241,19 +266,16 @@
               width="62"
             />
           </a>
+          <a class="nav-item nav-link p-2" id="btn-palette" title="More Colors">
+            <img
+              src="images/palette.png"
+              alt="Color Picker"
+              id="change"
+              height="50"
+              width="50"
+            />
+          </a>
         </div>
-      </div>
-      <div>
-        <p id="themes">Want more themes?</p>
-        <button type="button" id="btn-palette">
-          <img
-            src="images/palette.png"
-            alt="Color Picker"
-            id="change"
-            height="50"
-            width="50"
-          />
-        </button>
       </div>
     </nav>
 
@@ -385,22 +407,16 @@
           <p>
             Download the Karma app today! Available in
             <a
-              class="url-style"
+              id="url-style"
               href="https://play.google.com/store/apps/details?id=com.karma.life"
-              ><img
-                src="images/android.png"
-                alt="Android"
-                height="25"
-                width="25"
-              />
+              ><img src="images/android.png" height="25" width="25" />
               Android</a
             >
             and
             <a
-              class="url-style"
+              id="url-style"
               href="https://apps.apple.com/se/app/karma-the-surplus-food-app/id1087490062"
-              ><img src="images/ios.png" alt="iOS" height="25" width="25" />
-              iOS</a
+              ><img src="images/ios.png" height="25" width="25" /> iOS</a
             >
           </p>
         </div>
