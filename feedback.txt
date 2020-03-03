@@ -1,0 +1,13 @@
+ Some specific feedback on the case:
+
+    The end result is simple but quite elegant and it’s nice to see that there is an animation and multiple themes
+    We like the design you went for
+    The GitHub username field is validated and gives a nice error message if it doesn’t exist
+
+Improvement potential:
+
+    We’re missing a backend, to see fullstack capabilities
+    No frontend framework seems to have been used for the case
+    We’re wondering how you would approach building a scalable application
+    All JS code is in two files using plain JS - while it does it job end-result wise, we would have liked to see a bit more - 
+    e.g. to be able to see how the app could be extended and maintained
